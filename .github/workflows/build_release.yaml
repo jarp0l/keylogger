@@ -1,0 +1,16 @@
+name: Build and release program
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2.0.0
+    - name: Build project
+      run: make
+    - name: Create a Release
+      uses: softprops/action-gh-release@v1
+      with:
+        files: build/keylogger.exe
