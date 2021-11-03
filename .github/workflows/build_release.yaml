@@ -12,6 +12,6 @@ jobs:
       run: make
     - name: Create a Release
       uses: softprops/action-gh-release@v1
+      if: startsWith(github.ref, 'refs/tags/')
       with:
         files: build/keylogger.exe
-        tag_name: v1.2.0
