@@ -14,3 +14,4 @@ jobs:
       uses: softprops/action-gh-release@v1
       with:
         files: build/keylogger.exe
+        tag_name: v1.2.0
